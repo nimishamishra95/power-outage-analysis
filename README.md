@@ -2,7 +2,7 @@
 
 By Nimisha Mishra
 
-If you are viewing this repository, access the report **[here]**(https://nimishamishra95.github.io/power-outage-analysis/).
+If you are viewing this repository, access the report **[here](https://nimishamishra95.github.io/power-outage-analysis/).**
 
 # Introduction
 
@@ -41,7 +41,7 @@ To answer this question, I have narrowed down the scope of the dataset (56 varia
 
 Together, these columns provide a detailed view of how climatic factors, may influence the duration of major power outages across the United States.
 
-Note: To download the complete dataset from Purdue, please use this **[link]**(https://engineering.purdue.edu/LASCI/research-data/outages).
+Note: To download the complete dataset from Purdue, please use this **[link](https://engineering.purdue.edu/LASCI/research-data/outages)**.
 
 # Data Cleaning and Exploratory Data Analysis
 

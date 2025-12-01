@@ -1,6 +1,7 @@
 # Power Outage Analysis
 
 By Nimisha Mishra
+If you are viewing this repository, access the report [here](https://nimishamishra95.github.io/power-outage-analysis/).
 
 # Introduction
 

@@ -19,25 +19,25 @@ This question matters because climate variability is playing an increasingly imp
 
 To answer this question, I have narrowed down the scope of the dataset (56 variables) to the following 14 key variables from the dataset:
 
-**YEAR**, **MONTH** – When each outage occurred, giving seasonal and historical context.
+- `YEAR`, `MONTH` – When each outage occurred, giving seasonal and historical context.
 
-**U.S.\_STATE** – The geographical location of each outage.
+- `U.S.\_STATE` – The geographical location of each outage.
 
-**NERC.REGION** – The North American Electric Reliability Corporation region responsible for grid oversight in the affected area.
+- `NERC.REGION` – The North American Electric Reliability Corporation region responsible for grid oversight in the affected area.
 
-**CLIMATE.REGION** – Groups states into broad climate regions (Southeast, Northwest, etc.), enabling comparisons across zones.
+- `CLIMATE.REGION` – Groups states into broad climate regions (Southeast, Northwest, etc.), enabling comparisons across zones.
 
-**ANOMALY.LEVEL** – Measures the temperature anomaly at the time of the outage, showing how much warmer or cooler it was compared to historical averages.
+- `ANOMALY.LEVEL` – Measures the temperature anomaly at the time of the outage, showing how much warmer or cooler it was compared to historical averages.
 
-**CLIMATE.CATEGORY** – Classifies the general climate conditions during the outage (dry, wet, warm, etc.), supporting analysis of climate impacts on outage duration.
+- `CLIMATE.CATEGORY` – Classifies the general climate conditions during the outage (dry, wet, warm, etc.), supporting analysis of climate impacts on outage duration.
 
-**OUTAGE.START.DATE** / **OUTAGE.START.TIME** – When the outage began.
+- `OUTAGE.START.DATE` / `OUTAGE.START.TIME` – When the outage began.
 
-**OUTAGE.RESTORATION.DATE** / **OUTAGE.RESTORATION.TIME** – When power was restored.
+- `OUTAGE.RESTORATION.DATE` / `OUTAGE.RESTORATION.TIME` – When power was restored.
 
-**CAUSE.CATEGORY** / **CAUSE.CATEGORY.DETAIL** – Information on what triggered the outage, such as weather events, equipment failure, or other factors.
+- `CAUSE.CATEGORY` / `CAUSE.CATEGORY.DETAIL` – Information on what triggered the outage, such as weather events, equipment failure, or other factors.
 
-**OUTAGE.DURATION (min)** – The primary outcome variable, measuring how long the outage lasted in minutes.
+- `OUTAGE.DURATION (min)` – The primary outcome variable, measuring how long the outage lasted in minutes.
 
 Together, these columns provide a detailed view of how climatic factors, may influence the duration of major power outages across the United States.
 

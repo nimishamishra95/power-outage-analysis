@@ -1,5 +1,7 @@
 # Power Outage Analysis
 
+By Nimisha Mishra
+
 # Introduction
 
 # Data Cleaning and Exploratory Data Analysis

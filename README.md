@@ -1,3 +1,5 @@
+# Power Outage Analysis
+
 # Introduction
 
 # Data Cleaning and Exploratory Data Analysis

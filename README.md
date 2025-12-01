@@ -8,7 +8,7 @@ If you are viewing this repository, access the report **[here](https://nimishami
 
 ### Context & Guiding Question
 
-Major power outages are disruptive events that affect daily life, compromise public safety, and create significant economic burdens across the United States. Understanding not just when and where outages occur, but also why they last as long as they do, is essential for improving grid resilience and preparing infrastructure for a changing climate. This project uses a dataset from Purdue University’s Laboratory for Advancing Sustainable Critical Infrastructure (LASCI), which tracks major power outages across the continental U.S. The dataset includes 1,534 rows detailing the geographical, climatic, and operational characteristics of each event, offering a view of outage patterns, impacts, and regional factors.
+Major power outages are disruptive events that affect daily life, compromise public safety, and create significant economic burdens across the United States. Understanding not just when and where outages occur, but also why they last as long as they do, is essential for improving grid resilience and preparing infrastructure for a changing climate. This project uses a dataset from Purdue University’s Laboratory for Advancing Sustainable Critical Infrastructure (LASCI), which tracks major power outages across the continental U.S. The dataset includes 1534 rows detailing the geographical, climatic, and operational characteristics of each event, offering a view of outage patterns, impacts, and regional factors.
 
 The question I chose to guide my analysis is:
 How do climate region and the categorical cause of an outage influence the duration of major power outages?

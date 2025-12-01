@@ -25,11 +25,11 @@ To answer this question, I have narrowed down the scope of the dataset (56 varia
 
 **NERC.REGION** – The North American Electric Reliability Corporation region responsible for grid oversight in the affected area.
 
-**CLIMATE.REGION** – Groups states into broad climate regions (e.g., Southeast, Northwest), enabling comparisons across zones.
+**CLIMATE.REGION** – Groups states into broad climate regions (Southeast, Northwest, etc.), enabling comparisons across zones.
 
 **ANOMALY.LEVEL** – Measures the temperature anomaly at the time of the outage, showing how much warmer or cooler it was compared to historical averages.
 
-**CLIMATE.CATEGORY** – Classifies the general climate conditions during the outage (e.g., dry, wet, warm), supporting analysis of climate impacts on outage duration.
+**CLIMATE.CATEGORY** – Classifies the general climate conditions during the outage (dry, wet, warm, etc.), supporting analysis of climate impacts on outage duration.
 
 **OUTAGE.START.DATE** / **OUTAGE.START.TIME** – When the outage began.
 

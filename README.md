@@ -1,5 +1,3 @@
 # Power Outage Analysis
 
-**By Nimisha Mishra**
-
-power-outage-analysis is maintained by nimishamishra95.
+<p style="text-align:center; font-size:1.2rem; color:#6c757d;">By Nimisha Mishra</p>

@@ -66,7 +66,7 @@ Note: This data will likely be manipulated further when I use it for hypothesis 
 
 <iframe
   src="assets/outages-by-cause-category.html"
-  width="800"
+  width="830"
   height="550"
   frameborder="0"
 ></iframe>
@@ -80,14 +80,14 @@ Note: This data will likely be manipulated further when I use it for hypothesis 
 
 <iframe
   src="assets/outages-by-hour.html"
-  width="800"
+  width="830"
   height="500"
   frameborder="0"
 ></iframe>
 
 <iframe
   src="assets/outages-by-year.html"
-  width="800"
+  width="830"
   height="500"
   frameborder="0"
 ></iframe>

@@ -53,13 +53,13 @@ I also addressed placeholder values used throughout the dataset. Several numeric
 
 Preview of CLEANED DATASET:
 
-| year                  | month | us state | nerc region | climate region | climate category | cause category | outage duration | outage start datetime | outage restoration datetime |
-| :-------------------- | :---- | -------: | ----------: | -------------: | ---------------: | -------------: | --------------: | --------------------: | :-------------------------- |
-| ESPORTSTMNT01_2690210 | Blue  |        0 |           2 |              3 |                2 |              0 |               0 |                    11 | top                         |
-| ESPORTSTMNT01_2690210 | Blue  |        0 |           2 |              5 |                6 |              1 |               0 |                   115 | jng                         |
-| ESPORTSTMNT01_2690210 | Blue  |        0 |           2 |              2 |                3 |              0 |               0 |                    16 | mid                         |
-| ESPORTSTMNT01_2690210 | Blue  |        0 |           2 |              4 |                2 |              1 |               0 |                    18 | bot                         |
-| ESPORTSTMNT01_2690210 | Blue  |        0 |           1 |              5 |                6 |              1 |               1 |                     0 | sup                         |
+| year | month | us state  | nerc region | climate region     | climate category | cause category     | outage duration | outage start datetime | outage restoration datetime |
+| ---: | ----: | :-------- | :---------- | :----------------- | :--------------- | :----------------- | --------------: | --------------------: | :-------------------------- |
+| 2011 |   7.0 | Minnesota | MRO         | East North Central | normal           | severe weather     |               0 |                    11 | top                         |
+| 2014 |   5.0 | Minnesota | MRO         | East North Central | normal           | intentional attack |               0 |                   115 | jng                         |
+| 2010 |  10.0 | Minnesota | MRO         | East North Central | cold             | severe weather     |               0 |                    16 | mid                         |
+| 2012 |   6.0 | Minnesota | MRO         | East North Central | normal           | severe weather     |               0 |                    18 | bot                         |
+| 2015 |   7.0 | Minnesota | MRO         | East North Central | warm             | severe weather     |               1 |                     0 | sup                         |
 
 Note: This data will likely be manipulated further when I use it for hypothesis testing and modeling.
 

@@ -54,12 +54,12 @@ I also addressed placeholder values used throughout the dataset. Several numeric
 Preview of CLEANED DATASET:
 
 | year | month | us state  | nerc region | climate region     | climate category | cause category     | outage duration | outage start datetime | outage restoration datetime |
-| ---: | ----: | :-------- | :---------- | :----------------- | :--------------- | :----------------- | --------------: | --------------------: | :-------------------------- |
-| 2011 |   7.0 | Minnesota | MRO         | East North Central | normal           | severe weather     |               0 |                    11 | top                         |
-| 2014 |   5.0 | Minnesota | MRO         | East North Central | normal           | intentional attack |               0 |                   115 | jng                         |
-| 2010 |  10.0 | Minnesota | MRO         | East North Central | cold             | severe weather     |               0 |                    16 | mid                         |
-| 2012 |   6.0 | Minnesota | MRO         | East North Central | normal           | severe weather     |               0 |                    18 | bot                         |
-| 2015 |   7.0 | Minnesota | MRO         | East North Central | warm             | severe weather     |               1 |                     0 | sup                         |
+| ---: | ----: | :-------- | :---------- | :----------------- | :--------------- | :----------------- | --------------: | --------------------: | --------------------------: |
+| 2011 |   7.0 | Minnesota | MRO         | East North Central | normal           | severe weather     |          3060.0 |   2011-07-01 17:00:00 |         2011-07-03 20:00:00 |
+| 2014 |   5.0 | Minnesota | MRO         | East North Central | normal           | intentional attack |             1.0 |   2014-05-11 18:38:00 |         2014-05-11 18:39:00 |
+| 2010 |  10.0 | Minnesota | MRO         | East North Central | cold             | severe weather     |          3000.0 |   2010-10-26 20:00:00 |         2010-10-28 22:00:00 |
+| 2012 |   6.0 | Minnesota | MRO         | East North Central | normal           | severe weather     |          2550.0 |   2012-06-19 04:30:00 |         2012-06-20 23:00:00 |
+| 2015 |   7.0 | Minnesota | MRO         | East North Central | warm             | severe weather     |          1740.0 |   2015-07-18 02:00:00 |         2015-07-19 07:00:00 |
 
 Note: This data will likely be manipulated further when I use it for hypothesis testing and modeling.
 

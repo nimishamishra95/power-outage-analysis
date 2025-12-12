@@ -132,6 +132,18 @@ This stacked bar chart displays the distribution of outage causes by NERC region
 
 ### Aggregrate Analysis
 
+| cause category (hor) / climate region (vert) | equipment failure | fuel supply emergency | intentional attack | islanding | public appeal | severe weather | system operability disruption |
+| :------------------------------------------- | ----------------- | --------------------- | ------------------ | --------- | ------------- | -------------- | ----------------------------- |
+| Central                                      | 149.0             | 7500.5                | 198.0              | 96.0      | 1410.0        | 1695.0         | 65.0                          |
+| East North Central                           | 761.0             | 13564.0               | 1046.0             | 1.0       | 733.0         | 4005.0         | 2694.0                        |
+| Northeast                                    | 267.5             | 12240.0               | 30.0               | 881.0     | 2760.0        | 3189.0         | 234.5                         |
+| Northwest                                    | 702.0             | 1.0                   | 292.0              | 21.0      | 898.0         | 3507.0         | 157.5                         |
+| South                                        | 227.0             | 20160.0               | 110.0              | 493.5     | 430.0         | 2027.5         | 396.5                         |
+| Southeast                                    | 308.5             | NaN                   | 108.0              | NaN       | 4320.0        | 1355.0         | 129.0                         |
+| Southwest                                    | 35.0              | 76.0                  | 57.0               | 2.0       | 2275.0        | 2425.0         | 337.5                         |
+| West                                         | 269.0             | 882.5                 | 118.0              | 128.5     | 420.0         | 962.0          | 199.0                         |
+| West North Central                           | 61.0              | NaN                   | 47.0               | 56.0      | 439.5         | 83.0           | NaN                           |
+
 # Assessment of Missingness
 
 # Hypothesis Testing

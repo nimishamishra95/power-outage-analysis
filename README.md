@@ -217,6 +217,29 @@ Because the p-value is greater than α = 0.01, I fail to reject the null hypothe
 
 # Hypothesis Testing
 
+In the following hypothesis, I am testing whether the average duration of power outages in the South climate region is greater than the average duration of outages in the Northeast climate region. This investigation is important for understanding whether certain climate regions experience longer outages on average, which can have implications for resource allocation, infrastructure planning, and reliability measures in the power grid.
+
+**Null Hypothesis (H₀)**: The average outage duration in the South climate region is the same as the average outage duration in the Northeast climate region.
+
+**Alternative Hypothesis (H₁)**: The average outage duration in the South climate region is greater than the average outage duration in the Northeast climate region.
+
+**Test Statistic**: Difference in mean outage duration between South and Northeast (Mean South − Mean Northeast)
+
+**Observed Mean Difference**: -458.06
+
+**Significance Level**: 5%
+
+Here is a histogram containing the distribution of the test statistics generated from the permutation test, with the observed mean difference indicated as a red vertical line:
+
+<iframe
+  src="assets/hyp-test-fig.html"
+  width="850"
+  height="600"
+  frameborder="0"
+></iframe>
+
+Based on the hypothesis test I performed, the p-value is 0.8331. Since the p-value is much greater than the significance level of 0.05, I fail to reject the null hypothesis. This suggests that there is no significant evidence to conclude that the average outage duration in the South is greater than in the Northeast. And actually, the negative observed mean difference indicates that, on average, outages in the South were slightly shorter than in the Northeast in the dataset, although this difference is not statistically significant.
+
 # Framing a Prediction Problem
 
 # Baseline Model

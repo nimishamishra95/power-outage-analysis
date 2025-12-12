@@ -49,7 +49,7 @@ I began the data cleaning process by standardizing all column names, as the orig
 
 Next, I cleaned the time and date related fields. Outage start information and restoration information were each split into two separate object columns (one for the date and one for the time). To fix this, I merged each pair into a single timestamp column and converted them into proper datetime objects. Although outage duration was already provided, creating these unified timestamps was important because it allowed me to use the timing information in more flexible ways such as aggregating outages by hour, examining patterns across days or months, and generating more accurate time-based visualizations. After merging, I removed the original date and time columns to avoid redundancy across the dataset.
 
-I also addressed placeholder values used throughout the dataset. Several numeric columns, including month, year, and outage duration, incorrectly used 0 to represent missing data, and some categorical fields used empty strings. I replaced all such values with np.nan to explicitly indicate missingness and prevent inaccurate summaries, misclassifications, or distorted model outputs.
+I also addressed placeholder values used throughout the dataset. Several numeric columns, including month, year, and outage duration, incorrectly used 0 to represent missing data, and some categorical fields used empty strings. I replaced all such values with `np.nan` to explicitly indicate missingness and prevent inaccurate summaries, misclassifications, or distorted model outputs.
 
 Preview of CLEANED DATASET:
 | year | month | us state | nerc region | climate region | climate category | cause category | outage duration | outage start datetime | outage restoration datetime |
@@ -67,7 +67,7 @@ Note: This data will likely be manipulated further when I use it for hypothesis 
 <iframe
   src="assets/outages-by-cause-category.html"
   width="800"
-  height="500"
+  height="550"
   frameborder="0"
 ></iframe>
 
@@ -81,14 +81,14 @@ Note: This data will likely be manipulated further when I use it for hypothesis 
 <iframe
   src="assets/outages-by-hour.html"
   width="800"
-  height="450"
+  height="500"
   frameborder="0"
 ></iframe>
 
 <iframe
   src="assets/outages-by-year.html"
   width="800"
-  height="45    0"
+  height="500"
   frameborder="0"
 ></iframe>
 

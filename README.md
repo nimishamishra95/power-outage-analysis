@@ -17,7 +17,7 @@ This question matters because climate variability is playing an increasingly imp
 
 ### Relevant Columns
 
-To answer this question, I have narrowed down the scope of the dataset (56 variables) to the following 13 key variables from the dataset:
+To answer this question, I have narrowed down the scope of the dataset (56 variables) to the following 12 key variables from the dataset:
 
 - `YEAR`, `MONTH` – When each outage occurred, giving seasonal and historical context.
 
@@ -26,8 +26,6 @@ To answer this question, I have narrowed down the scope of the dataset (56 varia
 - `NERC.REGION` – The North American Electric Reliability Corporation region responsible for grid oversight in the affected area.
 
 - `CLIMATE.REGION` – Groups states into broad climate regions (Southeast, Northwest, etc.), enabling comparisons across zones.
-
-- `ANOMALY.LEVEL` – Measures the temperature anomaly at the time of the outage, showing how much warmer or cooler it was compared to historical averages.
 
 - `CLIMATE.CATEGORY` – Classifies the general climate conditions during the outage (dry, wet, warm, etc.), supporting analysis of climate impacts on outage duration.
 
@@ -44,6 +42,59 @@ Together, these columns provide a detailed view of how climatic factors, may inf
 Note: To download the complete dataset from Purdue, please use this **[link](https://engineering.purdue.edu/LASCI/research-data/outages)**.
 
 # Data Cleaning and Exploratory Data Analysis
+
+### Data Cleaning
+
+I began the data cleaning process by standardizing all column names, as the original dataset used uppercase letters and mixed punctuation such as periods and underscores, which made the variables difficult to read and work with. I reformatted each name to be lowercase and separated by spaces (for example, converting `U.S._STATE` to `us state`). Although this is a simple adjustment, it significantly improved the readability and usability of the dataset. After this, I reduced the dataset from the original 56 variables to the 13 variables relevant to my analysis that I mentioned above, allowing me to focus on the factors most tied to outage duration rather than carrying unnecessary fields through each step of my workflow.
+
+Next, I cleaned the time and date related fields. Outage start information and restoration information were each split into two separate object columns (one for the date and one for the time). To fix this, I merged each pair into a single timestamp column and converted them into proper datetime objects. Although outage duration was already provided, creating these unified timestamps was important because it allowed me to use the timing information in more flexible ways such as aggregating outages by hour, examining patterns across days or months, and generating more accurate time-based visualizations. After merging, I removed the original date and time columns to avoid redundancy across the dataset.
+
+I also addressed placeholder values used throughout the dataset. Several numeric columns, including month, year, and outage duration, incorrectly used 0 to represent missing data, and some categorical fields used empty strings. I replaced all such values with np.nan to explicitly indicate missingness and prevent inaccurate summaries, misclassifications, or distorted model outputs.
+
+Preview of CLEANED DATASET:
+|year|month|us state |nerc region|climate region |climate category|cause category |outage duration|outage start datetime|outage restoration datetime|
+|----|-----|---------|-----------|------------------|----------------|------------------|---------------|---------------------|---------------------------|
+|2011|7.0 |Minnesota|MRO |East North Central|normal |severe weather |3060.0 |2011-07-01 17:00:00 |2011-07-03 20:00:00 |
+|2014|5.0 |Minnesota|MRO |East North Central|normal |intentional attack|1.0 |2014-05-11 18:38:00 |2014-05-11 18:39:00 |
+|2010|10.0 |Minnesota|MRO |East North Central|cold |severe weather |3000.0 |2010-10-26 20:00:00 |2010-10-28 22:00:00 |
+|2012|6.0 |Minnesota|MRO |East North Central|normal |severe weather |2550.0 |2012-06-19 04:30:00 |2012-06-20 23:00:00 |
+|2015|7.0 |Minnesota|MRO |East North Central|warm |severe weather |1740.0 |2015-07-18 02:00:00 |2015-07-19 07:00:00 |
+
+Note: This data will likely be manipulated further when I use it for hypothesis testing and modeling.
+
+### Univariate Analysis
+
+<iframe
+  src="assets/outages-by-cause-category.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+<iframe
+  src="assets/outages-by-climate-region.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+<iframe
+  src="assets/outages-by-hour.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+<iframe
+  src="assets/outages-by-year.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+### Bivariate Analysis
+
+### Aggregrate Analysis
 
 # Assessment of Missingness
 

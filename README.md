@@ -244,6 +244,10 @@ Based on the hypothesis test I performed, the p-value is 0.8331. Since the p-val
 
 # Framing a Prediction Problem
 
+For this project, I will develop a model that can predict the duration of power outages, making this a regression problem. The response variable is outage duration because understanding and forecasting how long outages last is critical for planning, resource allocation, and improving grid reliability. I chose a regression approach because outage duration is a continuous variable, and we want the model to provide specific numerical predictions rather than classifying outages into discrete categories.
+
+The features I want to use for prediction are climate region, climate category, and cause category. I selected these because they are known at the time of the outage and can influence outage duration, making them suitable for real-time prediction. I will evaluate the model using mean absolute error (MAE), as it provides an interpretable measure of the average prediction error in hours, which is more meaningful in this context than metrics like RMSE that can be overly influenced by extreme values. This setup ensures the model only uses information that would be available at the time of prediction and provides actionable insights for utilities managing outages.
+
 # Baseline Model
 
 # Final Model

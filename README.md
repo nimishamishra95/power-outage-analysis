@@ -53,13 +53,13 @@ I also addressed placeholder values used throughout the dataset. Several numeric
 
 Preview of CLEANED DATASET:
 
-| gameid                | side | result | kills | deaths | assists | firstblood | firstbloodkill | monsterkills | position | minionkills | league |
-| :-------------------- | :--- | -----: | ----: | -----: | ------: | ---------: | -------------: | -----------: | :------- | ----------: | :----- |
-| ESPORTSTMNT01_2690210 | Blue |      0 |     2 |      3 |       2 |          0 |              0 |           11 | top      |         220 | LCKC   |
-| ESPORTSTMNT01_2690210 | Blue |      0 |     2 |      5 |       6 |          1 |              0 |          115 | jng      |          33 | LCKC   |
-| ESPORTSTMNT01_2690210 | Blue |      0 |     2 |      2 |       3 |          0 |              0 |           16 | mid      |         177 | LCKC   |
-| ESPORTSTMNT01_2690210 | Blue |      0 |     2 |      4 |       2 |          1 |              0 |           18 | bot      |         208 | LCKC   |
-| ESPORTSTMNT01_2690210 | Blue |      0 |     1 |      5 |       6 |          1 |              1 |            0 | sup      |          42 | LCKC   |
+| year                  | month | us state | nerc region | climate region | climate category | cause category | outage duration | outage start datetime | outage restoration datetime |
+| :-------------------- | :---- | -------: | ----------: | -------------: | ---------------: | -------------: | --------------: | --------------------: | :-------------------------- |
+| ESPORTSTMNT01_2690210 | Blue  |        0 |           2 |              3 |                2 |              0 |               0 |                    11 | top                         |
+| ESPORTSTMNT01_2690210 | Blue  |        0 |           2 |              5 |                6 |              1 |               0 |                   115 | jng                         |
+| ESPORTSTMNT01_2690210 | Blue  |        0 |           2 |              2 |                3 |              0 |               0 |                    16 | mid                         |
+| ESPORTSTMNT01_2690210 | Blue  |        0 |           2 |              4 |                2 |              1 |               0 |                    18 | bot                         |
+| ESPORTSTMNT01_2690210 | Blue  |        0 |           1 |              5 |                6 |              1 |               1 |                     0 | sup                         |
 
 Note: This data will likely be manipulated further when I use it for hypothesis testing and modeling.
 

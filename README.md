@@ -294,6 +294,8 @@ Final Model Classification Report:
                     macro avg       0.50      0.48      0.48       279
                  weighted avg       0.69      0.71      0.69       279
 
-Overall, the final model shows that adding thoughtful, data-driven features and tuning hyperparameters can significantly improve both predictive accuracy and fairness across classes.
+The final model shows a very clear improvement over the baseline across multiple metrics and classes. Overall accuracy increased from 0.60 to 0.71, and the F1-score improved from 0.32 to 0.48, indicating that the model is performing better not just on the majority class but across all classes. Smaller and previously under-predicted categories like islanding and equipment failure now have higher recall and F1-scores, showing that the model is more capable of identifying minority classes. Major classes like intentional attack and severe weather also have higher precision and F1-scores, which means the model is becoming more consistent and reliable at predicting.
+
+Overall, the final model shows that adding thoughtful, engineered features and tuning hyperparameters can significantly improve both predictive accuracy and fairness across classes.
 
 # Fairness Analysis

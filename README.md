@@ -159,6 +159,34 @@ The column `OUTAGE.RESTORATION.DATE`, which contains 58 missing values, can be c
 
 ### Missing Dependency
 
+<iframe
+  src="assets/missingness-cause-category.html"
+  width="830"
+  height="550"
+  frameborder="0"
+></iframe>
+
+<iframe
+  src="assets/tvd-missingness-cause-category.html"
+  width="830"
+  height="550"
+  frameborder="0"
+></iframe>
+
+<iframe
+  src="assets/missingness-nerc-region.html"
+  width="830"
+  height="550"
+  frameborder="0"
+></iframe>
+
+<iframe
+  src="assets/tvd-missingness-nerc-region.html"
+  width="830"
+  height="550"
+  frameborder="0"
+></iframe>
+
 # Hypothesis Testing
 
 # Framing a Prediction Problem

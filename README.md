@@ -159,12 +159,27 @@ The column `OUTAGE.RESTORATION.DATE`, which contains 58 missing values, can be c
 
 ### Missing Dependency
 
+In this section, I investigated whether the missingness of the outage duration column depends on other attributes in the dataset. I chose cause category as my dependent column (missingness depends on this column) and NERC region (missingness does NOT depend on this column) as my independent column. For both permutation tests, we use a significance level of α = 0.01, and we use Total Variance Distance (TVD) as the test statistic to quantify differences between distributions.
+
+**Testing Dependency Between Missing Outage Duration and Cause Category**
+
+Null Hypothesis (H₀): The distribution of cause category when outage duration is missing is the same as when outage duration is not missing.
+
+Alternative Hypothesis (H₁): The distributions are not the same.
+
 <iframe
   src="assets/missingness-cause-category.html"
   width="830"
-  height="550"
+  height="650"
   frameborder="0"
 ></iframe>
+
+After running the permutation test, I obtained the following statistics:
+
+- Observed TVD: 0.469
+- p-value: 0.000
+
+Because the p-value is less than α = 0.01, I reject the null hypothesis. The missingness of outage duration depends on the cause category column, which means that outages of certain causes are more or less likely to have missing duration values.
 
 <iframe
   src="assets/tvd-missingness-cause-category.html"
@@ -173,12 +188,25 @@ The column `OUTAGE.RESTORATION.DATE`, which contains 58 missing values, can be c
   frameborder="0"
 ></iframe>
 
+**Testing Dependency Between Missing Outage Duration and NERC Region**
+
+Null Hypothesis (H₀): The distribution of NERC region when outage duration is missing is the same as when outage duration is not missing.
+
+Alternative Hypothesis (H₁): The distributions are not the same.
+
 <iframe
   src="assets/missingness-nerc-region.html"
   width="830"
-  height="550"
+  height="650"
   frameborder="0"
 ></iframe>
+
+After running the permutation test, I obtained the following statistics:
+
+- Observed TVD: 0.143
+- p-value: 0.045
+
+Because the p-value is greater than α = 0.01, I fail to reject the null hypothesis. The missingness of outage duration does not depend on NERC region, which means missing duration values seem to be unrelated to geographic region.
 
 <iframe
   src="assets/tvd-missingness-nerc-region.html"

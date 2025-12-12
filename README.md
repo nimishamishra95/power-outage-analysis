@@ -244,12 +244,39 @@ Based on the hypothesis test I performed, the p-value is 0.8331. Since the p-val
 
 # Framing a Prediction Problem
 
-For this project, I will develop a model that can predict the duration of power outages, making this a regression problem. The response variable is outage duration because understanding and forecasting how long outages last is critical for planning, resource allocation, and improving grid reliability. I chose a regression approach because outage duration is a continuous variable, and we want the model to provide specific numerical predictions rather than classifying outages into discrete categories.
+For my prediction component, I will build a model that predicts the cause category of a major power outage at the moment the outage is reported. This keeps the overall project cohesive as everything I’ve done so far has revolved around understanding why outages happen and how different factors influence them. Since `cause category` has multiple possible outcomes, this is a multiclass classification problem. I’m using only information that would be available at the time of prediction, like the `month`, `NERC region`, `climate region`, and `climate category`. These features reflect the broader environmental and regional context surrounding each outage, and because they’re known immediately, they avoid the pitfall of using future variables like outage duration or restoration time.
 
-The features I want to use for prediction are climate region, climate category, and cause category. I selected these because they are known at the time of the outage and can influence outage duration, making them suitable for real-time prediction. I will evaluate the model using mean absolute error (MAE), as it provides an interpretable measure of the average prediction error in hours, which is more meaningful in this context than metrics like RMSE that can be overly influenced by extreme values. This setup ensures the model only uses information that would be available at the time of prediction and provides actionable insights for utilities managing outages.
+To evaluate the model, I’m focusing on F1-score alongside accuracy. Accuracy alone can be misleading here because outage causes are noticeably imbalanced as weather-related outages dominate the dataset, while other categories appear far less frequently. The F1-score treats each cause category equally, which gives me a much clearer sense of whether the model is doing well across the board rather than just memorizing the majority class. In a setting like this, where understanding minority causes is just as important, the F1-score provides a more honest and well-rounded assessment of how the model performs.
 
 # Baseline Model
 
+For my baseline model, I used a simple XGBoost classifier wrapped in a single sklearn Pipeline that handled all preprocessing and model training end-to-end. The model uses four features: `month` (quantitative), `climate category` (nominal), `climate region` (nominal), and `NERC region` (nominal). Since the only quantitative feature (month) doesn’t require encoding, I left it as-is and standardized it using a StandardScaler. All three nominal features were transformed using a OneHotEncoder so the model could work with them properly.
+
+In terms of performance, the baseline model achieved an accuracy of 0.60 and a F1-score of 0.315 on the test set. While 60% accuracy might look decent at first glance, the F1-score tells a different story: the model is struggling significantly on the minority cause categories, sometimes failing to predict them at all. Most of the performance is being carried by the dominant class, severe weather, which is consistent with the warnings in the classification report. Because this baseline is intentionally simple, I wouldn’t consider it “good” yet, but it definitely established a starting point that highlights the current weaknesses of the model and set a very clear direction for improvement in the final model.
+
 # Final Model
+
+For my final model, I expanded the baseline by adding two new features: `year` (quantitative) and `US state` (nominal), on top of the original features (month, NERC region, climate region, and climate category). The year feature provides more long term temporal context than month (as month provides more seasonal context), allowing the model to capture long-term trends or policy/technology changes that could influence outage causes. Including the US state gives more granular geographic information than NERC region or climate region alone, which helps the model differentiate between areas that share a broad climate zone but have different infrastructure or operational practices. In terms of preprocessing, year was standardized using StandardScaler, while US state (like the other categorical features) was one-hot encoded. Then, I integrated this preprocessing and model training into my baseline sklearn Pipeline.
+
+The modeling algorithm I chose was XGBoost, the same as in the baseline, but I improved performance through hyperparameter tuning using GridSearchCV. I tuned max_depth (to control tree complexity), learning_rate (to control how much each tree impacts the model), and n_estimators (the number of trees), and applied 3-fold cross-validation to optimize the F1-score. The best combination was a learning rate of 0.07, max depth of 6, and 600 trees. On the test set, the final model achieved accuracy of 0.71 and an F1-score of 0.48, which is definitely a significant improvement over the baseline model's 0.60 accuracy and 0.32 F1.
+
+Here is the baseline classification report and final model classification report, so you can see the improvement in the model:
+
+Baseline Classification Report
+| | precision | recall | f1-score | support|
+|----------------------------:|-------:|-----:|------:|--------:|
+|equipment failure | 0.00 | 0.00 | 0.00 | 11|
+|fuel supply emergency |0.33| 0.14| 0.20 |7|
+|intentional attack |0.58 |0.52 |0.54| 66|
+|islanding| 0.00 |0.00| 0.00| 9|
+|public appeal |0.56 |0.36 |0.43 |14|
+|severe weather| 0.66| 0.82| 0.73| 148|
+|system operability |disruption |0.30 |0.29| 0.30| 24|
+
+                     accuracy                           0.60       279
+                    macro avg       0.35      0.30      0.32       279
+                 weighted avg       0.55      0.60      0.57       279
+
+Overall, the final model shows that adding thoughtful, data-driven features and tuning hyperparameters can significantly improve both predictive accuracy and fairness across classes.
 
 # Fairness Analysis

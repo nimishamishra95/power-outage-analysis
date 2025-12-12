@@ -153,6 +153,12 @@ This pivot table allows us to understand how power outage durations vary across 
 
 # Assessment of Missingness
 
+### NMAR Analysis
+
+The column `OUTAGE.RESTORATION.DATE`, which contains 58 missing values, can be classified as Not Missing At Random (NMAR) because the missingness could be inherently linked to the nature of the outage event itself. For example, if the power was not restored at the time the data was reported, there would be no date or time to record, which directly ties the missing value to the ongoing status of the event. Similarly, for outages that were minor or very short, restoration details could have been deemed unnecessary to log, which means that the absence of this data is again related to the characteristics of the outage rather than occurring randomly. In both cases, the probability of a missing value is dependent on the unobserved value or the specific circumstances of the event rather than other observed data, making this column likely NMAR.
+
+### Missing Dependency
+
 # Hypothesis Testing
 
 # Framing a Prediction Problem

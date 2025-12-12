@@ -233,8 +233,8 @@ Here is a histogram containing the distribution of the test statistics generated
 
 <iframe
   src="assets/hyp-test-fig.html"
-  width="850"
-  height="600"
+  width="900"
+  height="650"
   frameborder="0"
 ></iframe>
 

@@ -132,6 +132,13 @@ This stacked bar chart displays the distribution of outage causes by NERC region
 
 ### Aggregrate Analysis
 
+This pivot table allows us to understand how power outage durations vary across both climate regions and cause categories by taking the median power outage duration for each combination of the two variables, which also ultimately ties back to my research question above. Here are a couple of trends I picked up from the pivot table below:
+
+- fuel supply emergencies seem to lead to the longest outages overall
+- equipment failure seems to cause shorter outages
+- high amount of variability across both regions and causes
+- NaN values suggest gaps in reporting
+
 | cause category (hor) / climate region (vert) | equipment failure | fuel supply emergency | intentional attack | islanding | public appeal | severe weather | system operability disruption |
 | :------------------------------------------- | ----------------- | --------------------- | ------------------ | --------- | ------------- | -------------- | ----------------------------- |
 | Central                                      | 149.0             | 7500.5                | 198.0              | 96.0      | 1410.0        | 1695.0         | 65.0                          |

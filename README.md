@@ -74,6 +74,8 @@ First, I graphed the frequency of outages by their cause category. As shown belo
   frameborder="0"
 ></iframe>
 
+This is a pie chart of the distribution of power outages by climate region. It seems that the Northeast tends to have the most power outages, while the West North Central has the least.
+
 <iframe
   src="assets/outages-by-climate-region.html"
   width="800"
@@ -81,12 +83,16 @@ First, I graphed the frequency of outages by their cause category. As shown belo
   frameborder="0"
 ></iframe>
 
+Next, I plotted the the number of power outages by hour. It seems most power powerages occur from 12 PM to 5 PM.
+
 <iframe
   src="assets/outages-by-hour.html"
   width="830"
   height="500"
   frameborder="0"
 ></iframe>
+
+Lastly, I plotted the distribution of power outages by year. As shown, 2011 had the most power outages.
 
 <iframe
   src="assets/outages-by-year.html"

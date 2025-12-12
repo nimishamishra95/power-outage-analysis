@@ -206,7 +206,7 @@ After running the permutation test, I obtained the following statistics:
 - Observed TVD: 0.143
 - p-value: 0.045
 
-Because the p-value is greater than α = 0.01, I fail to reject the null hypothesis. The missingness of outage duration does not depend on NERC region, which means missing duration values seem to be unrelated to geographic region.
+Because the p-value is greater than α = 0.01, I fail to reject the null hypothesis. The missingness of outage duration does not depend on NERC region, which means missing duration values seem to be unrelated to the NERC region responsible for grid oversight in the area of the power outage.
 
 <iframe
   src="assets/tvd-missingness-nerc-region.html"

@@ -52,6 +52,8 @@ Next, I cleaned the time and date related fields. Outage start information and r
 I also addressed placeholder values used throughout the dataset. Several numeric columns, including month, year, and outage duration, incorrectly used 0 to represent missing data, and some categorical fields used empty strings. I replaced all such values with `np.nan` to explicitly indicate missingness and prevent inaccurate summaries, misclassifications, or distorted model outputs.
 
 Preview of CLEANED DATASET:
+
+<div style="overflow-x:auto;">
 | year | month | us state | nerc region | climate region | climate category | cause category | outage duration | outage start datetime | outage restoration datetime |
 |------|-------|-----------|------------|-------------------|-----------------|--------------------|----------------|------------------------|----------------------------|
 | 2011 | 7 | Minnesota | MRO | East North Central | normal | severe weather | 3060 | 2011-07-01 17:00:00 | 2011-07-03 20:00:00 |
@@ -59,6 +61,7 @@ Preview of CLEANED DATASET:
 | 2010 | 10 | Minnesota | MRO | East North Central | cold | severe weather | 3000 | 2010-10-26 20:00:00 | 2010-10-28 22:00:00 |
 | 2012 | 6 | Minnesota | MRO | East North Central | normal | severe weather | 2550 | 2012-06-19 04:30:00 | 2012-06-20 23:00:00 |
 | 2015 | 7 | Minnesota | MRO | East North Central | warm | severe weather | 1740 | 2015-07-18 02:00:00 | 2015-07-19 07:00:00 |
+</div>
 
 Note: This data will likely be manipulated further when I use it for hypothesis testing and modeling.
 

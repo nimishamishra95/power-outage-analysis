@@ -53,19 +53,19 @@ I also addressed placeholder values used throughout the dataset. Several numeric
 
 Preview of CLEANED DATASET:
 
-<div style="overflow-x:auto;">
-| year | month | us state | nerc region | climate region | climate category | cause category | outage duration | outage start datetime | outage restoration datetime |
-|------|-------|-----------|------------|-------------------|-----------------|--------------------|----------------|------------------------|----------------------------|
-| 2011 | 7 | Minnesota | MRO | East North Central | normal | severe weather | 3060 | 2011-07-01 17:00:00 | 2011-07-03 20:00:00 |
-| 2014 | 5 | Minnesota | MRO | East North Central | normal | intentional attack | 1 | 2014-05-11 18:38:00 | 2014-05-11 18:39:00 |
-| 2010 | 10 | Minnesota | MRO | East North Central | cold | severe weather | 3000 | 2010-10-26 20:00:00 | 2010-10-28 22:00:00 |
-| 2012 | 6 | Minnesota | MRO | East North Central | normal | severe weather | 2550 | 2012-06-19 04:30:00 | 2012-06-20 23:00:00 |
-| 2015 | 7 | Minnesota | MRO | East North Central | warm | severe weather | 1740 | 2015-07-18 02:00:00 | 2015-07-19 07:00:00 |
-</div>
+| gameid                | side | result | kills | deaths | assists | firstblood | firstbloodkill | monsterkills | position | minionkills | league |
+| :-------------------- | :--- | -----: | ----: | -----: | ------: | ---------: | -------------: | -----------: | :------- | ----------: | :----- |
+| ESPORTSTMNT01_2690210 | Blue |      0 |     2 |      3 |       2 |          0 |              0 |           11 | top      |         220 | LCKC   |
+| ESPORTSTMNT01_2690210 | Blue |      0 |     2 |      5 |       6 |          1 |              0 |          115 | jng      |          33 | LCKC   |
+| ESPORTSTMNT01_2690210 | Blue |      0 |     2 |      2 |       3 |          0 |              0 |           16 | mid      |         177 | LCKC   |
+| ESPORTSTMNT01_2690210 | Blue |      0 |     2 |      4 |       2 |          1 |              0 |           18 | bot      |         208 | LCKC   |
+| ESPORTSTMNT01_2690210 | Blue |      0 |     1 |      5 |       6 |          1 |              1 |            0 | sup      |          42 | LCKC   |
 
 Note: This data will likely be manipulated further when I use it for hypothesis testing and modeling.
 
 ### Univariate Analysis
+
+First, I graphed the frequency of outages by their cause category. As shown below, severe weathers seems to cause the most outages out of all cause categories.
 
 <iframe
   src="assets/outages-by-cause-category.html"

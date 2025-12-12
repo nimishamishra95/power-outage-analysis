@@ -303,9 +303,11 @@ For my fairness analysis, I decided to compare outages in the South versus outag
 I used macro-averaged precision as my evaluation metric because it accounts for all cause categories and handles any class imbalance. To test for fairness, I ran a permutation test, shuffling the group labels 10,000 times to create a null distribution of precision differences. Then I compared my observed precision difference between the South and Northwest to this null distribution.
 
 **Null Hypothesis**: The model is fair. Its precision is roughly the same for South and Northwest outages, and any differences are due to random chance.
+
 **Alternative Hypothesis**: The model is unfair. Its precision for South outages is lower than for Northwest outages.
 
 **Significance Level**: 5%
+
 **P-value**: 0.1564
 
 After running the test, I got a p-value of 0.1564. Since this is above the 0.05 significance level, I fail to reject the null hypothesis. This means there’s no evidence that the model performs worse in the South compared to the Northwest. The histogram below shows the null distribution of precision differences, with the observed difference highlighted for reference.

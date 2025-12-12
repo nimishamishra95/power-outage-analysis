@@ -229,6 +229,8 @@ In the following hypothesis, I am testing whether the average duration of power 
 
 **Significance Level**: 5%
 
+**P-value**: 0.8331
+
 Here is a histogram containing the distribution of the test statistics generated from the permutation test, with the observed mean difference indicated as a red vertical line:
 
 <iframe

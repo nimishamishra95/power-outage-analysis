@@ -297,3 +297,22 @@ The final model shows a very clear improvement over the baseline across multiple
 Overall, the final model shows that adding thoughtful, engineered features and tuning hyperparameters can significantly improve both predictive accuracy and fairness across classes.
 
 # Fairness Analysis
+
+For my fairness analysis, I decided to compare outages in the South versus outages in the Northwest. I chose these groups because after inspection of the pivot table I made under the "Aggregate Analysis" section, these two regions seemed to have very distinct outage duration values, which could indicate possible regional differences. Since regional factors can influence outage patterns, I wanted to ensure that my model performs consistently across areas. Ensuring fairness here is important, since inaccurate predictions in one region could mislead energy companies about which outages to prioritize.
+
+I used macro-averaged precision as my evaluation metric because it accounts for all cause categories and handles any class imbalance. To test for fairness, I ran a permutation test, shuffling the group labels 10,000 times to create a null distribution of precision differences. Then I compared my observed precision difference between the South and Northwest to this null distribution.
+
+**Null Hypothesis**: The model is fair. Its precision is roughly the same for South and Northwest outages, and any differences are due to random chance.
+**Alternative Hypothesis**: The model is unfair. Its precision for South outages is lower than for Northwest outages.
+
+**Significance Level**: 5%
+**P-value**: 0.1564
+
+After running the test, I got a p-value of 0.1564. Since this is above the 0.05 significance level, I fail to reject the null hypothesis. This means there’s no evidence that the model performs worse in the South compared to the Northwest. The histogram below shows the null distribution of precision differences, with the observed difference highlighted for reference.
+
+<iframe
+  src="assets/distr_precision_diff.html"
+  width="900"
+  height="650"
+  frameborder="0"
+></iframe>

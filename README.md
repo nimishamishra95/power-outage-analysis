@@ -103,6 +103,27 @@ Lastly, I plotted the distribution of power outages by year. As shown, 2011 had 
 
 ### Bivariate Analysis
 
+<iframe
+  src="assets/outage-duration-by-month.html"
+  width="830"
+  height="500"
+  frameborder="0"
+></iframe>
+
+<iframe
+  src="assets/outage-duration-by-cause-category.html"
+  width="830"
+  height="500"
+  frameborder="0"
+></iframe>
+
+<iframe
+  src="assets/outage-cause-by-nerc-region.html"
+  width="830"
+  height="500"
+  frameborder="0"
+></iframe>
+
 ### Aggregrate Analysis
 
 # Assessment of Missingness

@@ -262,20 +262,48 @@ The modeling algorithm I chose was XGBoost, the same as in the baseline, but I i
 
 Here is the baseline classification report and final model classification report, so you can see the improvement in the model:
 
-Baseline Classification Report
-| | precision | recall | f1-score | support|
-|----------------------------:|-------:|-----:|------:|--------:|
-|equipment failure | 0.00 | 0.00 | 0.00 | 11|
-|fuel supply emergency |0.33| 0.14| 0.20 |7|
-|intentional attack |0.58 |0.52 |0.54| 66|
-|islanding| 0.00 |0.00| 0.00| 9|
-|public appeal |0.56 |0.36 |0.43 |14|
-|severe weather| 0.66| 0.82| 0.73| 148|
-|system operability |disruption |0.30 |0.29| 0.30| 24|
+Baseline Classification Report:
+
+|                    | precision | recall  | f1-score | support |
+| :----------------- | --------- | ------- | -------- | ------- |
+| Central            | 149.0     | 7500.5  | 198.0    | 96.0    |
+| East North Central | 761.0     | 13564.0 | 1046.0   | 1.0     |
+| Northeast          | 267.5     | 12240.0 | 30.0     | 881.0   |
+| Northwest          | 702.0     | 1.0     | 292.0    | 21.0    |
+| South              | 227.0     | 20160.0 | 110.0    | 493.5   |
+| Southeast          | 308.5     | NaN     | 108.0    | NaN     |
+| Southwest          | 35.0      | 76.0    | 57.0     | 2.0     |
+| West               | 269.0     | 882.5   | 118.0    | 128.5   |
+| West North Central | 61.0      | NaN     | 47.0     | 56.0    |
+
+|                               | precision | recall | f1-score | support |
+| ----------------------------: | --------: | -----: | -------: | ------: |
+|             equipment failure |      0.00 |   0.00 |     0.00 |      11 |
+|         fuel supply emergency |      0.33 |   0.14 |     0.20 |       7 |
+|            intentional attack |      0.58 |   0.52 |     0.54 |      66 |
+|                     islanding |      0.00 |   0.00 |     0.00 |       9 |
+|                 public appeal |      0.56 |   0.36 |     0.43 |      14 |
+|                severe weather |      0.66 |   0.82 |     0.73 |     148 |
+| system operability disruption |      0.30 |   0.29 |     0.30 |      24 |
 
                      accuracy                           0.60       279
                     macro avg       0.35      0.30      0.32       279
                  weighted avg       0.55      0.60      0.57       279
+
+Final Model Classification Report:
+| | precision | recall | f1-score | support|
+|----------------------------:|-------:|-----:|------:|--------:|
+|equipment failure| 0.25| 0.09 |0.13| 11|
+fuel supply emergency 0.33 0.29 0.31 7
+intentional attack 0.79 0.82 0.81 66
+islanding 0.50 0.33 0.40 9
+public appeal 0.55 0.79 0.65 14
+severe weather 0.78 0.81 0.80 148
+system operability disruption 0.27 0.25 0.26 24
+
+                     accuracy                           0.71       279
+                    macro avg       0.50      0.48      0.48       279
+                 weighted avg       0.69      0.71      0.69       279
 
 Overall, the final model shows that adding thoughtful, data-driven features and tuning hyperparameters can significantly improve both predictive accuracy and fairness across classes.
 

@@ -92,7 +92,7 @@ Next, I plotted the the number of power outages by hour. It seems most power pow
   frameborder="0"
 ></iframe>
 
-Lastly, I plotted the distribution of power outages by year. As shown, 2011 had the most power outages.
+Lastly, I plotted the distribution of power outages by year. As shown, there seems to be a significant spike in power outages from 2010 to 2011 (the year with the most power outages).
 
 <iframe
   src="assets/outages-by-year.html"
@@ -103,12 +103,16 @@ Lastly, I plotted the distribution of power outages by year. As shown, 2011 had 
 
 ### Bivariate Analysis
 
+This scatterplot of outage duration in minutes by month can help identify which months tend to have longer outage durations. However, after inspection, there doesn't seem to be any apparent pattern.
+
 <iframe
   src="assets/outage-duration-by-month.html"
   width="830"
   height="550"
   frameborder="0"
 ></iframe>
+
+In this scatterplot, I wanted to examine the relationship between cause category and outage duration. It seems that outages due to severe weather and fuel supply tend to last longer than outages caused by other reasons.
 
 <iframe
   src="assets/outage-duration-by-cause-category.html"
@@ -117,10 +121,12 @@ Lastly, I plotted the distribution of power outages by year. As shown, 2011 had 
   frameborder="0"
 ></iframe>
 
+This stacked bar chart displays the distribution of outage causes by NERC region. Upon examination, it looks like severe weather is the dominant cause for power outages in most regions, whereas, causes like public appeal and fuel supply emergency seem to be the least dominant.
+
 <iframe
   src="assets/outage-cause-by-nerc-region.html"
-  width="830"
-  height="650"
+  width="950"
+  height="600"
   frameborder="0"
 ></iframe>
 

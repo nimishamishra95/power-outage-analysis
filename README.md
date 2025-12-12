@@ -264,35 +264,33 @@ Here is the baseline classification report and final model classification report
 
 Baseline Classification Report:
 
-|                               | precision | recall | f1-score | support |
-| ----------------------------: | --------: | -----: | -------: | ------: |
-|             equipment failure |      0.00 |   0.00 |     0.00 |      11 |
-|         fuel supply emergency |      0.33 |   0.14 |     0.20 |       7 |
-|            intentional attack |      0.58 |   0.52 |     0.54 |      66 |
-|                     islanding |      0.00 |   0.00 |     0.00 |       9 |
-|                 public appeal |      0.56 |   0.36 |     0.43 |      14 |
-|                severe weather |      0.66 |   0.82 |     0.73 |     148 |
-| system operability disruption |      0.30 |   0.29 |     0.30 |      24 |
-
-                     accuracy                           0.60       279
-                    macro avg       0.35      0.30      0.32       279
-                 weighted avg       0.55      0.60      0.57       279
+|                               | precision |   recall | f1-score | support |
+| ----------------------------: | --------: | -------: | -------: | ------: |
+|             equipment failure |      0.00 |     0.00 |     0.00 |      11 |
+|         fuel supply emergency |      0.33 |     0.14 |     0.20 |       7 |
+|            intentional attack |      0.58 |     0.52 |     0.54 |      66 |
+|                     islanding |      0.00 |     0.00 |     0.00 |       9 |
+|                 public appeal |      0.56 |     0.36 |     0.43 |      14 |
+|                severe weather |      0.66 |     0.82 |     0.73 |     148 |
+| system operability disruption |      0.30 |     0.29 |     0.30 |      24 |
+|                  **accuracy** |           |          | **0.60** | **279** |
+|                 **macro avg** |  **0.35** | **0.30** | **0.32** | **279** |
+|              **weighted avg** |  **0.55** | **0.60** | **0.57** | **279** |
 
 Final Model Classification Report:
 
-|                               | precision | recall | f1-score | support |
-| ----------------------------: | --------: | -----: | -------: | ------: |
-|             equipment failure |      0.25 |   0.09 |     0.13 |      11 |
-|         fuel supply emergency |      0.33 |   0.29 |     0.31 |       7 |
-|            intentional attack |      0.79 |   0.82 |     0.81 |      66 |
-|                     islanding |      0.50 |   0.33 |     0.40 |       9 |
-|                 public appeal |      0.55 |   0.79 |     0.65 |      14 |
-|                severe weather |      0.78 |   0.81 |     0.80 |     148 |
-| system operability disruption |      0.27 |   0.25 |     0.26 |      24 |
-
-                     accuracy                           0.71       279
-                    macro avg       0.50      0.48      0.48       279
-                 weighted avg       0.69      0.71      0.69       279
+|                               | precision |   recall | f1-score | support |
+| ----------------------------: | --------: | -------: | -------: | ------: |
+|             equipment failure |      0.25 |     0.09 |     0.13 |      11 |
+|         fuel supply emergency |      0.33 |     0.29 |     0.31 |       7 |
+|            intentional attack |      0.79 |     0.82 |     0.81 |      66 |
+|                     islanding |      0.50 |     0.33 |     0.40 |       9 |
+|                 public appeal |      0.55 |     0.79 |     0.65 |      14 |
+|                severe weather |      0.78 |     0.81 |     0.80 |     148 |
+| system operability disruption |      0.27 |     0.25 |     0.26 |      24 |
+|                  **accuracy** |           |          | **0.71** | **279** |
+|                 **macro avg** |  **0.50** | **0.48** | **0.48** | **279** |
+|              **weighted avg** |  **0.69** | **0.71** | **0.69** | **279** |
 
 The final model shows a very clear improvement over the baseline across multiple metrics and classes. Overall accuracy increased from 0.60 to 0.71, and the F1-score improved from 0.32 to 0.48, indicating that the model is performing better not just on the majority class but across all classes. Smaller and previously under-predicted categories like islanding and equipment failure now have higher recall and F1-scores, showing that the model is more capable of identifying minority classes. Major classes like intentional attack and severe weather also have higher precision and F1-scores, which means the model is becoming more consistent and reliable at predicting.
 
